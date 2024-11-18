@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Documentation</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header styling */
+        header {
+            background: #0077b6;
+            color: #fff;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Navbar styling */
+        nav {
+            background: #005f8a;
+            color: #fff;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e0f7ff;
+        }
+
+        /* Main container styling */
+        main {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Back button styling */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005f8a;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #e0f7ff;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-left: 4px solid #0077b6;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+
+        p,
+        ul,
+        ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        /* Link styling */
+        a {
+            color: #0077b6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #005f8a;
+        }
+
+        /* Code block styling */
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            text-align: center;
+            color: #555;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>Admin Dashboard Documentation</header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#system-requirements">System Requirements</a></li>
+            <li><a href="#installation-setup">Installation & Setup</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#user-roles-permissions">User Roles & Permissions</a></li>
+            <li><a href="#dashboard-components">Dashboard Components</a></li>
+            <li><a href="#usage-guide">Usage Guide</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="/dashboard" class="back-button">Back to Dashboard</a>
+
+        <section id="introduction">
+            <h1>Introduction</h1>
+            <p>The Admin Dashboard is a centralized management platform designed for administrators to monitor and
+                manage key aspects of the application. It provides insights through analytics, control over user
+                management, and settings configuration to ensure a smooth operational experience.</p>
+        </section>
+
+        <section id="system-requirements">
+            <h2>System Requirements</h2>
+            <ul>
+                <li>OS: Ubuntu 22.04 or equivalent</li>
+                <li>Database: MongoDB (version 8.0.3)</li>
+                <li>Node.js: Version 20.18.0</li>
+                <li>npm: Version 10.8.2</li>
+                <li>Shell: Bash</li>
+            </ul>
+        </section>
+        <section id="installation-setup">
+            <h2>Installation and Setup</h2>
+            <ol>
+                <li>Clone the repository.</li>
+                <li>Install dependencies using <code>npm install</code>.</li>
+                <li>Start the server with <code>nodemon server.js</code>.</li>
+            </ol>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Analytics Dashboard</li>
+                <li>User Management</li>
+                <li>Content Management</li>
+                <li>Settings and Configuration</li>
+            </ul>
+        </section>
+        <section id="user-roles-permissions">
+            <h2>User Roles and Permissions</h2>
+            <p>The dashboard supports various user roles, each with specific permissions:</p>
+            <ul>
+                <li><strong>Admin</strong>: Full access to all functionalities.</li>
+                <li><strong>Editor</strong>: Can manage content but lacks access to settings.</li>
+                <li><strong>Viewer</strong>: Read-only access.</li>
+            </ul>
+        </section>
+        <section id="dashboard-components">
+            <h2>Dashboard Components</h2>
+            <ul>
+                <li>Sidebar: Navigation links to main sections.</li>
+                <li>Analytics: Visual reports on system usage.</li>
+                <li>User List: Manage users, roles, and permissions.</li>
+                <li>Settings: Adjust application configurations.</li>
+            </ul>
+        </section>
+        <section id="usage-guide">
+            <h2>Usage Guide</h2>
+            <p>Follow these steps to effectively use the Admin Dashboard:</p>
+            <ol>
+                <li>Log in with your administrator credentials.</li>
+                <li>Navigate through the sidebar to access different sections.</li>
+                <li>Use analytics to monitor user activity and performance metrics.</li>
+                <li>Manage users in the User List section.</li>
+                <li>Configure settings in the Settings section as needed.</li>
+            </ol>
+        </section>
+        <section id="customization">
+            <h2>Customization</h2>
+            <p>To customize the dashboard, modify the CSS and JavaScript files located in the <code>public</code>
+                folder. Ensure all changes are tested before deployment.</p>
+        </section>
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><strong>Issue:</strong> Cannot connect to MongoDB.
+                    <br><strong>Solution:</strong> Check if MongoDB service is running and verify the connection string.
+                </li>
+                <li><strong>Issue:</strong> Server crashes after a change.
+                    <br><strong>Solution:</strong> Restart the server using <code>nodemon server.js</code>.
+                </li>
+            </ul>
+        </section>
+        <section id="faq">
+            <h2>FAQ</h2>
+            <p><strong>Q: How do I add a new user role?</strong><br>A: Update the user roles in the settings file and
+                modify permissions in the roles management section.</p>
+            <p><strong>Q: How can I reset my admin password?</strong><br>A: Use the password reset feature on the login
+                page or contact support.</p>
+        </section>
+    </main>
+    <footer>&copy; 2024 Admin Dashboard Documentation</footer>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Material Icons with CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .icon {
+            font-size: 40px;
+            color: #666;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .icon:hover {
+            color: #ffffff;
+            background-color: #007bff;
+            transform: translateY(-5px) scale(1.1); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .icon-lg {
+            font-size: 60px;
+        }
+
+        .icon-sm {
+            font-size: 30px;
+        }
+        .icon-circle {
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .icon-heart {
+            color: #e63946; 
+        }
+
+        .icon-phone {
+            color: #f1faee;
+        }        @media (max-width: 768px) {
+            .icon-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Modern Material Icons with CSS</h1>
+    <p>Hover over the icons to see the effects:</p>
+    <div class="icon-container">
+        <i class="mdi mdi-home icon icon-circle"></i>
+        <i class="mdi mdi-account icon"></i>
+        <i class="mdi mdi-email icon icon-lg"></i>
+        <i class="mdi mdi-phone icon icon-sm icon-circle icon-phone"></i>
+    </div>
+</body>
+</html>
